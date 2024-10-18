@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Card grid layout */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card styles */
+.card {
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 250px; /* Fixed width */
+  height: 400px; /* Fixed height for consistent spacing */
+  margin: auto; /* Center card in grid */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card title styles */
+.card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Image styles */
+.card img {
+  width: 100px; /* Fixed size for the images */
+  height: auto; /* Adjust height automatically */
+  margin: 10px 0;
+}
+
+/* Stats display */
+.stats {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0; /* Added margin for spacing between stats */
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.stats p {
+  margin: 0;
+}
+
+/* Type in circle */
+.type {
+  background-color: #e0e0e0;
+  color: #555;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  width: 80px;  /* Adjusted size */
+  height: 80px; /* Adjusted size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto; /* Centered below the image */
+  font-weight: bold;
+  position: absolute; /* Changed to absolute for proper positioning */
+  bottom: 20px; /* Positioned at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+}
+
+/* Search input container */
+.pokemon-search {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin: 20px 0; /* Spacing above and below */
+}
+
+/* Search input styles */
+.pokemon-search input {
+  width: 100%; /* Full width on small screens */
+  max-width: 400px; /* Maximum width */
+  padding: 10px; /* Padding inside the input */
+  border-radius: 20px; /* Rounded corners */
+  border: 2px solid #007BFF; /* Blue border */
+  outline: none; /* Remove default outline */
+  font-size: 1rem; /* Font size */
+  transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+/* Input placeholder styles */
+.pokemon-search input::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
+/* Focus styles */
+.pokemon-search input:focus {
+  border-color: #0056b3; /* Darker blue when focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 15px;
+    height: 360px; /* Adjust height for mobile */
+  }
+
+  .card img {
+    width: 80px; /* Smaller image for mobile */
+    height: 80px; /* Keep height consistent */
+  }
+
+  .stat-row {
+    flex-direction: column; /* Stack stats vertically on small screens */
+    align-items: center; /* Center items */
+  }
+}
